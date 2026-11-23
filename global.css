@@ -73,3 +73,49 @@ body {
     color: white;
 }
 
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* MOVILESSSSSSSSSSSs */
+
+@media (max-width: 700px) {
+
+    .menu-nav {
+        justify-content: space-between;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .menu-nav-lista {
+        flex-direction: column;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.4s ease, opacity 0.4s ease;
+    }
+
+    #menu-toggle:checked ~ .menu-nav-lista {
+        max-height: 300px;
+        opacity: 1;
+    }
+
+    .menu-nav-lista a {
+        display: block;
+    }
+}
+
+.menu-nav-lista a.active {
+    background-color: #e32636;
+    color: white;
+}
